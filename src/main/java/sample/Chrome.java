@@ -14,11 +14,12 @@ public class Chrome {
 	 ChromeDriver driver = new ChromeDriver(); //set the driver launch the url
 	 
 	 driver.get("https://www.google.com/"); //load the Url
-	 
+	   
+	
 	 driver.manage().window().maximize();
 	 
 	 driver.findElement(By.name("q")).sendKeys("SELENIUM BROWSER DRIVER",Keys.ENTER);//it find the search bar using the name,enter the value
-	 //driver.close();
+	
 	}
 
 }
