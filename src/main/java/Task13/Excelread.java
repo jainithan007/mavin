@@ -29,10 +29,11 @@ public class Excelread {
 				 XSSFCell cell = row.getCell(j);
 				 
 				 data[i-1][j] = cell.getStringCellValue();
-				 System.out.println(cell.getStringCellValue());
+				 System.out.println(cell.getStringCellValue()+" ");
 			 }
+			 System.out.println();
 		 }
-		 
+	        book.close();	 
 	}
 }
 		 

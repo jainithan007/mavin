@@ -4,11 +4,12 @@ import java.awt.RenderingHints.Key;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Chrome {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
      
 	 ChromeDriver driver = new ChromeDriver(); //set the driver launch the url
@@ -18,7 +19,13 @@ public class Chrome {
 	
 	 driver.manage().window().maximize();
 	 
-	 driver.findElement(By.name("q")).sendKeys("SELENIUM BROWSER DRIVER",Keys.ENTER);//it find the search bar using the name,enter the value
+	 WebElement element =  driver.findElement(By.name("q"));
+	 
+		element.sendKeys("SELENIUM BROWSER DRIVER");
+		Thread.sleep(3000);
+		
+		element.clear();
+	 
 	
 	}
 
