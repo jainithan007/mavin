@@ -17,22 +17,14 @@ public class Frame {
 		
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+			
 		
-		
-		
-	driver.manage().window().maximize();
-		
-	
+	driver.manage().window().maximize();	
 	
 	  WebElement  frame  = driver.findElement(By.xpath("//iframe[@title='Rich Text Area']"));
 	   
 	   driver.switchTo().frame(frame);
-		
-	
-	  //WebElement tagname  =  driver.findElement(By.tagName("p")); 
-	  
-	
-	  
+	 
 	   WebElement  newWindowText = driver.findElement(By.xpath("//p[text()='Your content goes here.']"));
 	   
 	   
@@ -41,18 +33,6 @@ public class Frame {
 	   newWindowText.sendKeys("hello people");
 	  
 	  
-	  
-	 
-	  
-	 
-	  
-	 // ptag.clear();
-	  
-	   
-	  
-		
-		//paragraph.sendKeys("Hello people");
-		
 
 	}
 

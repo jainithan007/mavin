@@ -2,8 +2,11 @@ package Task21;
 
 
 
+import java.util.Set;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Second {
@@ -19,18 +22,23 @@ public class Second {
 		
 		driver.findElement(By.linkText("Click Here")).click();
 		
-		String newWindowText = driver.findElement(By.tagName("h3")).getText();
+		Set<String> windowHandles = driver.getWindowHandles();
+		
+		WebElement text = driver.findElement(By.tagName("body"));
+		String newWindowText = text.getText();
 		
 		if (newWindowText.equals("New Window")) {
             System.out.println("New Window text is present.");
-        } else {
+        } 
+		else {
             System.out.println("New Window text is not present.");
-        }
-		
+        }	
 			
-	driver.close();	
+	driver.close();
 	
-	driver.quit();
+	 System.out.println("Original window is active.");
+	
+	 driver.quit();	
 	}
 
 }
